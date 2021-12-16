@@ -7,5 +7,7 @@ urlpatterns = [
     path('addroom/',views.addRoom, name ='addRoom'),
     path('updateroom/<str:pk>/',views.updateRoom, name ='updateRoom'),
     path('deleteroom/<str:pk>/',views.deleteRoom, name ='deleteRoom'),
+    path('login/',views.signin, name='signin'),
+    path('logout/',views.signout, name='signout'),
     
 ]

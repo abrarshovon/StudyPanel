@@ -39,11 +39,26 @@
       <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search">
       
     </form>
+    
   </ul>
+   {% if request.user.is_authenticated %}
+       <a href="{% url 'signout' %}">Singout </a>
+       {% else %}
+       <a href="{% url 'signin' %}">Singin </a>
+
+       {% endif %}
 
 </nav>
 <br>
-  
+<div>
+  {% if messages %}
+        <ul class="messages">
+     {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+       </ul>
+      {% endif %}
+</div>
 {% block content %}
 {% endblock content %}
 
