@@ -9,5 +9,7 @@ urlpatterns = [
     path('deleteroom/<str:pk>/',views.deleteRoom, name ='deleteRoom'),
     path('login/',views.signin, name='signin'),
     path('logout/',views.signout, name='signout'),
+    path('signup/',views.signup, name='signup'),
+
     
 ]

@@ -43,6 +43,7 @@
   </ul>
    {% if request.user.is_authenticated %}
        <a href="{% url 'signout' %}">Singout </a>
+      <h1> hi {{user.username}}</h1>
        {% else %}
        <a href="{% url 'signin' %}">Singin </a>
 
